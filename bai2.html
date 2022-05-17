@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<style>
+    table {
+        margin-top: 20px;
+    }
+
+    button[type="button"] {
+        margin-right: 10px;
+    }
+
+    button[type="button"]:last-child {
+        margin-top: 10px;
+        margin-left: 300px;
+    }
+
+    #input_marks {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid green;
+        padding: 5px;
+        display: block !important;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Product list </h2>
+        <hr>
+        <form action="" method="POST" class="form-inline">
+            <div class="form-group d-flex">
+                <input class="w-10" placeholder="find something..." id="input_marks">
+            </div>
+            <button type="button" class="btn btn-primary" id="btn_filter">Lọc Prices</button>
+            <button type="button" class="btn btn-success ml-2" onclick="setDefault()">Mặc định</button>
+            <button type="button" class="btn btn-success" onclick="sort_markAvg('ASC')">Giá tăng dần</button>
+            <button type="button" class="btn btn-success" onclick="sort_markAvg('DESC')">Giá giảm dần</button>
+            <form action="" method="POST" class="form-inline">
+                <button type="button" class="btn btn-primary" id="btn_filterCategory">Find Category name</button>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category Name</th>
+                        <th>Giá</th>
+                        <th>Hình ảnh</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-list"></tbody>
+            </table>
+        </form>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- file code.js sau khi biên dịch -->
+    <script src="app2.js"></script>
+</body>
+
+</html>
